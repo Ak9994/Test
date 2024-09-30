@@ -6,6 +6,7 @@ pipeline {
             steps {
                 // Clone your Git repository
                 git 'https://github.com/Ak9994/Test.git' // Change to your repo URL
+                checkout scm
             }
         }
         stage('Build Docker Image') {
