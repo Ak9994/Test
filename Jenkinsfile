@@ -27,7 +27,18 @@ pipeline {
                 }
             }
         }
-        
+        stage('Minikube login'){
+            environment{
+                registryCredential = 'docker-hub'
+            }
+            steps{
+                script{
+                    docker.withRegistry('https://registry.hub.docker.com',registryCredential){
+                        dockerImage.push("hello-world-app");
+                    }
+                }
+            }
+        }
         stage('Deploy to MiniKube'){
             steps{
                 bat 'kubectl apply -f deployment.yaml'
