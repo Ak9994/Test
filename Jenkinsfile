@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Minikube login'){
             environment{
-                registryCredential = 'dockerhub'
+                registryCredential = 'dockerhub1'
             }
             steps{
                 script{
