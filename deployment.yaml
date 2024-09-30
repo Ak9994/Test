@@ -1,0 +1,25 @@
+apiversion: app/V1
+kind: Deployment #mention the state
+metadata: 
+  name: Test_deployment
+spec:
+  replicas: 1 #shows how many replicas you want to run
+  
+  selector: 
+    matchLabels:
+      app: Test
+  
+  template:   #Template for creating pods
+    metadata:
+      labels:
+        app: Test
+
+  spec:   
+  containers:
+  - name: docker-test
+    image: ak774/docker-test
+    ports:
+    - containerport: 8081:3000   
+
+
+
