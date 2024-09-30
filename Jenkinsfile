@@ -30,7 +30,7 @@ pipeline {
     post {
         always {
             // Clean up
-            sh 'docker rmi hello-world-app'
+            bat 'docker rmi hello-world-app'
         }
     }
 }
