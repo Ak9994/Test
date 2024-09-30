@@ -17,13 +17,20 @@ pipeline {
                 }
             }
         }
+        
         stage('Run Docker Container') {
             steps {
                 script {
                     // Run the Docker container
-                    bat 'kubectl apply -f deployment.yaml'
+                    
                     docker.image("hello-world-app").run()
                 }
+            }
+        }
+        
+        stage('Deploy to MiniKube'){
+            steps{
+                bat 'kubectl apply -f deployment.yaml'
             }
         }
     }
