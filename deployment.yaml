@@ -19,7 +19,7 @@ spec:
   - name: docker-test
     image: ak774/docker-test
     ports:
-    - containerport: 8081:3000   
+    - containerport: 8081   
 
 
 
