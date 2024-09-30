@@ -25,6 +25,11 @@ pipeline {
                 }
             }
         }
+        stage('Deploy to MiniKube'){
+            steps{
+                bat 'kubectl apply -f deployment.yaml'
+            }
+        }
     }
 
     post {
