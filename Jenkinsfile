@@ -35,7 +35,7 @@ pipeline {
             }
             steps{
                 script{
-                    bat "echo \$DOCKER_PASSWORD | docker login -u \$DOCKER_USERNAME --password-stdin"
+                    bat "echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin"
                     //docker.withRegistry('https://registry.hub.docker.com',registryCredential){
                         //dockerImage.push("hello-world-app");}
                 }
