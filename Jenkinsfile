@@ -29,8 +29,8 @@ pipeline {
         }
         stage('Minikube login'){
             environment{
-                DOCKER_USERNAME = 'dockerhub1'
-                DOCKER_PASSWORD = 'Welcome#123'   
+                DOCKER_USERNAME = credentials('dockerhub1')
+                DOCKER_PASSWORD = credentials('Welcome#123')   
             }
             steps{
                 script{
