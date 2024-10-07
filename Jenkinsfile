@@ -30,7 +30,7 @@ pipeline {
         stage('Minikube login'){
             environment{
                 //registryCredential = 'dockerhub'
-                DOCKER_USERNAME = 'dockerhub1'
+                DOCKER_USERNAME = 'https://registry.hub.docker.com'
                 DOCKER_PASSWORD = 'dockerhub1'   
             }
             steps{
