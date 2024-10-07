@@ -22,7 +22,6 @@ pipeline {
             steps {
                 script {
                     // Run the Docker container
-                    
                     docker.image("hello-world-app").run()
                 }
             }
