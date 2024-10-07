@@ -7,5 +7,8 @@ WORKDIR /app
 # Copy the application code
 COPY app.py .
 
+#modify permissions
+RUN chmod -R 755 /app
+
 # Command to run the application
 CMD ["python", "app.py"]
