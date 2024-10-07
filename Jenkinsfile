@@ -29,13 +29,15 @@ pipeline {
         }
         stage('Minikube login'){
             environment{
-                registryCredential = 'dockerhub'
+                //registryCredential = 'dockerhub'
+                DOCKER_USERNAME = dockerhub1
+                DOCKER_PASSWORD = dockerhub1   
             }
             steps{
                 script{
-                    docker.withRegistry('https://registry.hub.docker.com',registryCredential){
-                        dockerImage.push("hello-world-app");
-                    }
+                    bat "echo \$DOCKER_PASSWORD | docker login -u \$DOCKER_USERNAME --password-stdin"
+                    //docker.withRegistry('https://registry.hub.docker.com',registryCredential){
+                        //dockerImage.push("hello-world-app");}
                 }
             }
         }
