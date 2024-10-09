@@ -1,10 +1,10 @@
-# Use the official Python image from Docker Hub
+#Official Python image from Docker Hub for Linux
 #FROM python:3.9-slim
 
-#for Windows
+#Windows python Docker Image
 FROM mcr.microsoft.com/windows/servercore:ltsc2019
 
-#Shell command
+#Shell for windows
 #SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 
 #for Linux need to modify permissions
