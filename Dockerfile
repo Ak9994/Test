@@ -2,10 +2,11 @@
 FROM python:3.9-slim
 
 # Set the working directory
-WORKDIR /app
+#WORKDIR /app
+ADD /app
 
-#modify permissions
-RUN chmod -R 755 /app
+#for Linux need to modify permissions
+#RUN chmod -R 755 /app
 
 # Copy the application code
 COPY app.py .
