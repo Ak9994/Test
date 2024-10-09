@@ -11,7 +11,7 @@
 
 
 #for Windows
-FROM mcr.microsoft.com/windows/servercore
+FROM mcr.microsoft.com/windows/servercore:ltsc2019
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 ARG CONFIGURATION
 EXPOSE 8081
