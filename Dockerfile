@@ -13,9 +13,9 @@
 #for Windows
 FROM mcr.microsoft.com/windows/servercore:ltsc2019
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
+ADD src/MyFolder/bin/$CONFIGURATION/ /app
 ARG CONFIGURATION
 EXPOSE 8081
-ADD src/MyFolder/bin/$CONFIGURATION/ /app
 CMD ["python", "app.py"]
 
 
