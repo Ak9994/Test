@@ -16,6 +16,6 @@ SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 ARG CONFIGURATION
 EXPOSE 8081
 ADD src/MyFolder/bin/$CONFIGURATION/ /app
-CMD /app/app.py
+python app.py
 
 
