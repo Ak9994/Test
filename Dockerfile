@@ -13,9 +13,10 @@
 #for Windows
 FROM mcr.microsoft.com/windows/servercore:ltsc2019
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
-WORKDIR /app
-COPY app.py .
 EXPOSE 8081
+WORKDIR /app
+ENTRYPOINT [".app"]
+COPY app.py .
 CMD ["python", "app.py"]
 
 
