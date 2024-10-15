@@ -7,6 +7,9 @@ FROM mcr.microsoft.com/windows/servercore:ltsc2019
 #Shell for windows
 #SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 
+#EntryPoint
+ENTRYPOINT ["powershell.exe"]
+
 #for Linux need to modify permissions
 #RUN chmod -R 755 /app
 
