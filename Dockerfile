@@ -23,7 +23,7 @@ WORKDIR /app
 COPY app.py .
 
 # Command to run the application
-CMD ["python", "app.py"]
+CMD ["pip", "app.py"]
 
 
 
